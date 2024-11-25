@@ -1,8 +1,8 @@
-const express = require('express');
-const { resolve } = require('path');
+let express = require("express");
+let cors = require("cors");
 
-const app = express();
-const port = 3000;
+let app = express();
+app.use(cors());
 
 //Server-side values
 let taxrate = 5;
@@ -102,6 +102,4 @@ app.get('/loyalty-points', (req, res) => {
 });
 //API End
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+
