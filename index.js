@@ -102,4 +102,6 @@ app.get('/loyalty-points', (req, res) => {
 });
 //API End
 
-
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
