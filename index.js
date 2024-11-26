@@ -1,9 +1,9 @@
-let express = require("express");
-let cors = require("cors");
+const express = require('express');
 const { resolve } = require('path');
+let cors = require('cors');
 
+const app = express();
 const port = 3000;
-let app = express();
 app.use(cors());
 
 //Server-side values
