@@ -93,8 +93,8 @@ app.get('/estimate-delivery', (req, res) => {
 });
 
 app.get('/shipping-cost', (req, res) => {
-  let weight = parseFloat(res.query.weight);
-  let distance = parseFloat(res.query.distance);
+  let weight = parseFloat(req.query.weight);
+  let distance = parseFloat(req.query.distance);
   res.send(calShippingCost(weight, distance).toString());
 });
 
